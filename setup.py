@@ -15,7 +15,7 @@ setup(
     url = "http://github.com/tzulberti/django-request-provider",
     keywords = [
         "django contrib",
-        "request object provider"
+        "session login expiration"
     ],
     classifiers = [
         'Development Status :: 5 - Production/Stable',
