@@ -2,3 +2,4 @@
 *.pot
 *.pyc
 local_settings.py
+django_session_idle_timeout.egg-info/
