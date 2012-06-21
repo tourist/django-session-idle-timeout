@@ -7,10 +7,11 @@ setup(
     ],
     packages = find_packages('.'),
     package_dir = {'':'.'},
-    version = "1.0.0",
+    version = "1.0.1",
     description = "Timeout a logged user after a period of time",
     long_description=open('README.md').read(-1),
     author = "Tomas Zulberti",
+    zip_safe = False,
     author_email = "tzulberti@gmail.com",
     url = "http://github.com/tzulberti/django-request-provider",
     keywords = [
