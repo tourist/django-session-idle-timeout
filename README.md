@@ -65,5 +65,26 @@ The default value is 30min.
 SESSION_IDLE_TIMEOUT = 1800
 ```
 
+## Keepalive Ping
+
+Keeps the session alive as long as the browser window is opened using a javascript ping.
+
+### Urls
+
+Add to your urls.py e.g.:
+```python
+urlpatterns += (
+    url(r'^django-session-idle-timeout/', include('django-session-idle-timeout.urls')),
+)
+```
+
+### Template
+
+Load the keepalive template tag to start the javascript polling:
+```django
+{% session_keep_alive %}
+{% load session_keep_alive %}
+```
+
 ## Important
 This is a fork of http://github.com/subhranath/django-session-idle-timeout
