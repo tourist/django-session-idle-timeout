@@ -7,7 +7,7 @@ setup(
     ],
     packages = find_packages('.'),
     package_dir = {'':'.'},
-    version = "1.0.1",
+    version = "1.1",
     description = "Timeout a logged user after a period of time",
     long_description=open('README.md').read(-1),
     author = "Tomas Zulberti",
