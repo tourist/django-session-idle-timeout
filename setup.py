@@ -6,6 +6,7 @@ setup(
         'Django',
     ],
     packages = find_packages(),
+    include_package_data=True,
     version = "1.1.2",
     description = "Timeout a logged user after a period of time",
     long_description=open('README.md').read(-1),
