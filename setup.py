@@ -3,17 +3,17 @@ from setuptools import setup, find_packages
 setup(
     name = "django-session-idle-timeout",
     install_requires = [
-        'django',
+        'Django',
     ],
-    packages = find_packages('.'),
-    package_dir = {'':'.'},
-    version = "1.0.1",
+    packages = find_packages(),
+    include_package_data=True,
+    version = "1.1.2",
     description = "Timeout a logged user after a period of time",
     long_description=open('README.md').read(-1),
     author = "Tomas Zulberti",
     zip_safe = False,
     author_email = "tzulberti@gmail.com",
-    url = "http://github.com/tzulberti/django-request-provider",
+    url = "http://github.com/tzulberti/django-session-idle-timeout",
     keywords = [
         "django contrib",
         "session login expiration"
