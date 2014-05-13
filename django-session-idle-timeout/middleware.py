@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import datetime
+import time
 
 from django.contrib.auth import logout
 from django.contrib import messages
@@ -16,15 +16,15 @@ class SessionIdleTimeout:
     def process_request(self, request):
         # Timeout is done only for authenticated logged in users.
         if request.user.is_authenticated():
-            current_datetime = datetime.datetime.now()
+            current_timestamp = int(time.time())
 
             # Timeout if idle time period is exceeded.
             if request.session.has_key('last_activity') and \
-                (current_datetime - request.session['last_activity']).seconds > \
+                (current_timestamp - request.session['last_activity']) > \
                 SESSION_IDLE_TIMEOUT:
                 logout(request)
                 messages.add_message(request, messages.ERROR,
                                      _('Your session has been timed out.'))
             else:
-                request.session['last_activity'] = current_datetime
+                request.session['last_activity'] = current_timestamp
         return None
