@@ -1,4 +1,4 @@
-{% load url from future %}
+{% load url from future l10n %}
 <script type="text/javascript">
     function session_keep_alive() {
         http_request = new XMLHttpRequest();
@@ -7,5 +7,5 @@
     }
 
     // ping every five minutes
-    setInterval(session_keep_alive, {{ session_keepalive_interval }});
+    setInterval(session_keep_alive, {{ session_keepalive_interval|unlocalize }});
 </script>
